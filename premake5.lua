@@ -1,11 +1,6 @@
-project "GLFW"
-	kind "StaticLib"
-	language "C"
-	staticruntime "On"
-	warnings "off"
+solution.DefineCStaticLibrary("GLFW", function()
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	warnings "off"
 
 	files
 	{
@@ -29,7 +24,6 @@ project "GLFW"
 
 	filter "system:linux"
 		pic "On"
-
 		systemversion "latest"
 		
 		files
@@ -117,3 +111,5 @@ project "GLFW"
 		runtime "Release"
 		optimize "speed"
         symbols "off"
+
+end)
