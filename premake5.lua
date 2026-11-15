@@ -23,8 +23,6 @@ solution.DefineCStaticLibrary("GLFW", function()
 	}
 
 	filter "system:linux"
-		pic "On"
-		systemversion "latest"
 		
 		files
 		{
@@ -48,7 +46,6 @@ solution.DefineCStaticLibrary("GLFW", function()
 		}
 
 	filter "system:macosx"
-		pic "On"
 
 		files
 		{
@@ -70,7 +67,6 @@ solution.DefineCStaticLibrary("GLFW", function()
 		}
 
 	filter "system:windows"
-		systemversion "latest"
 
 		files
 		{
